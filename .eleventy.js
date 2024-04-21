@@ -8,6 +8,8 @@ module.exports = (eleventyConfig) => {
     './src/fonts': 'assets/fonts',
   });
 
+  addPlugins(eleventyConfig);
+
   return {
     dir: {
       input: 'src',
@@ -18,3 +20,12 @@ module.exports = (eleventyConfig) => {
     },
   };
 };
+
+const plugins = [require('./plugins/scss')];
+
+/** @param {UserConfig} eleventyConfig */
+function addPlugins(eleventyConfig) {
+  plugins.forEach((plugin) => {
+    eleventyConfig.addPlugin(plugin);
+  });
+}
