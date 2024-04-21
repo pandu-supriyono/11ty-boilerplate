@@ -4,12 +4,21 @@
   "description": "11ty-boilerplate helps you quickly get started with 11ty projects using SCSS and JS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "Pandu Supriyono <mail@supriyono.nl>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:pandu-supriyono/11ty-boilerplate.git"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
