@@ -1,0 +1,15 @@
+{
+  "name": "11ty-boilerplate",
+  "version": "1.0.0",
+  "description": "11ty-boilerplate helps you quickly get started with 11ty projects using SCSS and JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pandu Supriyono <mail@supriyono.nl>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pandu-supriyono/11ty-boilerplate.git"
+  }
+}
