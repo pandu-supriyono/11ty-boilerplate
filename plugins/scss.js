@@ -62,24 +62,6 @@ module.exports = (eleventyConfig) => {
     },
     compile: () => (data) => data._content,
   });
-
-  const outputMap = {};
-
-  eleventyConfig.addTransform('outputMap', function (content) {
-    const filepath = path.relative('src', this.page.inputPath);
-    outputMap[filepath] = this.page.url;
-    return content;
-  });
-
-  eleventyConfig.addFilter('hashed', function (filepath) {
-    if (!outputMap[filepath]) {
-      throw new Error(`hashed: ${filepath} not found in map.`);
-    }
-
-    return outputMap[filepath];
-  });
-
-  eleventyConfig.addWatchTarget('./src/stylesheets');
 };
 
 function getHash(content, length = 8) {

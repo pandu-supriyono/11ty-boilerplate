@@ -21,7 +21,11 @@ module.exports = (eleventyConfig) => {
   };
 };
 
-const plugins = [require('./plugins/scss')];
+const plugins = [
+  require('./plugins/scss'),
+  require('./plugins/javascript'),
+  require('./plugins/outputmap'),
+];
 
 /** @param {UserConfig} eleventyConfig */
 function addPlugins(eleventyConfig) {
