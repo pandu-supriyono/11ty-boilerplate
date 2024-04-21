@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "11ty-boilerplate helps you quickly get started with 11ty projects using SCSS and JS.",
   "main": "index.js",
+  "site": {
+    "title": "11ty boilerplate",
+    "description": "11ty-boilerplate helps you quickly get started with 11ty projects using SCSS and JS."
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "dev": "eleventy --serve",
     "prepare": "husky install"
   },
   "author": "Pandu Supriyono <mail@supriyono.nl>",
@@ -14,6 +20,7 @@
     "url": "git@github.com:pandu-supriyono/11ty-boilerplate.git"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
